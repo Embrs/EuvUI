@@ -74,9 +74,9 @@ module.exports = {
                             sourceMap: true,
                         },
                     },
-                    {
-                        loader: '\'autoprefixer-loader\'',
-                    },
+                    // {
+                    //     loader: '\'autoprefixer-loader\'',
+                    // },
                 ]
             },
             {
