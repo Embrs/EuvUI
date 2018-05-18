@@ -1,56 +1,24 @@
 <template lang="html">
-    <div class="env-upload" :style="styles">
-        <!-- 第一步 選擇圖 -->
-        <div v-show="stepPage === 1" class="box-group">
-            <!-- 顯示選擇圖示 -->
-            <div class="box" v-for="file,index in fileList">
-                <!-- 刪圖按鈕 -->
-                <div class="x-botton" @click="deleteImage($event,index)">
-                  <i class="material-icons x-button-icon">delete_forever</i>  
-                </div>
-                <img class="show-select-img" :src="file.src">
-            </div>
-            <!-- 選擇上傳圖片 -->
-            <div v-show="showUploadBox" class="box box-border">
-                <div class="upload-msg">
-                  <!-- 請拖曳一張圖片進行上傳 -->
-                  <i class="material-icons upload-icon">backup</i>
-                  <p>{{t('i.upload.selectImage')}}</p>
-                </div>
-                <input class="select-upload-image" ref="inputsx"  @change="getSelectImage($event)" type="file" name="" value="">
-            </div>
-            <!-- 上傳或下一步 -->
-            <div v-show="fileList.length > 0" class='next-step'> 
-                <button v-if="(usePosition === true)" class="do-upload" @click="stepPage = 2" type="button">下一步</button>
-                <button v-else class="do-upload" @click="toUploadImage($event)" type="button">{{t('i.upload.okToUpload')}}</button>
-            </div>
-        </div>
-        <!-- ========================================================================= -->
-        <!-- 第二步 選擇座標 -->
-        <div v-show="stepPage === 2" class="pos-group">
-          <div class="pos-box">
-            <div class="set-pos"> 
-              <!-- X軸 -->
-              {{t('i.upload.axisX')}}<input type="number" :value="setX" @input="setXVal" >
-            </div>
-            <div class="set-pos">
-              <!-- Y軸 -->
-              {{t('i.upload.axisY')}}<input type="number" :value="setY" @input="setYVal">
-            </div>
-          </div>
-          <!-- 確認上傳 -->
-          <button class="do-upload" @click="toUploadImage($event)" type="button">{{t('i.upload.okToUpload')}}</button>
-        </div>
+    <div class="env-table" :style="styles">
+  
     </div>
 </template>
 <script>
 /* eslint-disable */ 
+import Icon from '../icon';
 import Locale from '../../mixins/locale.js'; // for i18n
 
 export default {
-  // .match(/^([0-9.]){1,4}$/g)
-  name:'euvUpload',
+  name:'euvTable',
   mixins: [ Locale ], // for i18n
+  filter:{
+    reverse:function(value){
+      return value.slice().reverse();
+    }
+  },
+  components: {
+    Icon
+  },
   props:{
     multiple:{ // 上傳多張圖
       type: Boolean,
@@ -213,7 +181,8 @@ export default {
         z-index: 100;
         cursor: pointer;
         .x-button-icon{
-          font-size: 40px;
+          width: 100%;
+          height: 100%;
         } 
         &:hover{
           transition:background-color  0.4s linear;
@@ -237,7 +206,8 @@ export default {
         justify-content: center;
        
         .upload-icon{
-          font-size: 50px;
+          width: 10%;
+          height: 10%;
           margin: 10px;
         }
       }

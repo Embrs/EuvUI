@@ -1,6 +1,7 @@
 
 import euvUpload from './components/upload';
 import locale from './locale/index';
+import './styles/common/iconfont/material-icons.css'
 
 const components = {
     euvUpload
