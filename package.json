@@ -1,6 +1,6 @@
 {
   "name": "euvui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "title": "EuvUI",
   "description": "is UI",
   "author": "Embrs <ddembrs@gmail.com>",
@@ -25,11 +25,7 @@
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:prod": "webpack --config build/webpack.dist.prod.config.js",
     "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
-    "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod && npm run dist:locale",
-    "lint": "eslint --fix --ext .js,.vue src",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "test": "npm run lint && npm run unit",
-    "prepublish": "npm run dist"
+    "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod && npm run dist:locale"
   },
   "dependencies": {
     "async-validator": "^1.8.2",
