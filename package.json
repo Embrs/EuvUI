@@ -1,6 +1,6 @@
 {
   "name": "euvui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "title": "EuvUI",
   "description": "is UI",
   "author": "Embrs <ddembrs@gmail.com>",
@@ -34,6 +34,7 @@
     "i18n": "^0.8.3",
     "js-calendar": "^1.2.3",
     "lodash.throttle": "^4.1.1",
+    "material-design-icons": "^3.0.1",
     "popper.js": "^1.14.1",
     "tinycolor2": "^1.4.1",
     "v-click-outside-x": "^2.4.0"
