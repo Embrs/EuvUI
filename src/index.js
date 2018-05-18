@@ -1,7 +1,7 @@
 
 import euvUpload from './components/upload';
 import locale from './locale/index';
-import './styles/common/iconfont/material-icons.css'
+import 'material-design-icons/iconfont/material-icons.css';
 
 const components = {
     euvUpload
@@ -19,12 +19,6 @@ const install = function(Vue, opts = {}) {
     Object.keys(euvui).forEach(key => {
         Vue.component(key, euvui[key]);
     });
-
-    // Vue.prototype.$Loading = LoadingBar;
-    // Vue.prototype.$Message = Message;
-    // Vue.prototype.$Modal = Modal;
-    // Vue.prototype.$Notice = Notice;
-    // Vue.prototype.$Spin = Spin;
 };
 
 // auto install
@@ -37,8 +31,6 @@ const API = {
     locale: locale.use,
     i18n: locale.i18n,
     install,
-    // Circle,
-    // Switch,
     ...components
 };
 
