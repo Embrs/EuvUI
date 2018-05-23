@@ -1,6 +1,6 @@
 {
   "name": "euvui",
-  "version": "0.1.2",
+  "version": "0.1.21",
   "title": "EuvUI",
   "description": "is UI",
   "author": "Embrs <ddembrs@gmail.com>",
@@ -25,7 +25,7 @@
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:prod": "webpack --config build/webpack.dist.prod.config.js",
     "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
-    "dist": "npm run dist:style && npm run dist:dev && npm run dist:prod && npm run dist:locale"
+    "dist": "npm run dist:dev && npm run dist:prod && npm run dist:locale"
   },
   "dependencies": {
     "async-validator": "^1.8.2",
@@ -34,7 +34,6 @@
     "i18n": "^0.8.3",
     "js-calendar": "^1.2.3",
     "lodash.throttle": "^4.1.1",
-    "material-design-icons": "^3.0.1",
     "popper.js": "^1.14.1",
     "tinycolor2": "^1.4.1",
     "v-click-outside-x": "^2.4.0"
