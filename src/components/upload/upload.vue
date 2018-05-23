@@ -6,7 +6,9 @@
             <div class="box" v-for="file,index in fileList">
                 <!-- 刪圖按鈕 -->
                 <div class="x-botton" @click="deleteImage($event,index)">
-                  <i class="material-icons x-button-icon">delete_forever</i>  
+                  <!-- <i class="material-icons x-button-icon">delete_forever</i>   -->
+                  <h5>X</h5>
+                  <!-- <Icon type="arrow-right-b"></Icon> -->
                 </div>
                 <img class="show-select-img" :src="file.src">
             </div>
@@ -14,7 +16,8 @@
             <div v-show="showUploadBox" class="box box-border">
                 <div class="upload-msg">
                   <!-- 請拖曳一張圖片進行上傳 -->
-                  <i class="material-icons upload-icon">backup</i>
+                  <!-- <i class="material-icons upload-icon">backup</i> -->
+                  <!-- <Icon class="" type="arrow-right-b"></Icon> -->
                   <p>{{t('i.upload.selectImage')}}</p>
                 </div>
                 <input class="select-upload-image" ref="inputsx"  @change="getSelectImage($event)" type="file" name="" value="">
@@ -46,10 +49,15 @@
 <script>
 /* eslint-disable */ 
 import Locale from '../../mixins/locale.js'; // for i18n
+// import Icon from '../icon/icon';
+
 
 export default {
   // .match(/^([0-9.]){1,4}$/g)
   name:'euvUpload',
+  components: {
+    // Icon
+  },
   mixins: [ Locale ], // for i18n
   props:{
     multiple:{ // 上傳多張圖
