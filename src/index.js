@@ -2,7 +2,7 @@
 import euvUpload from './components/upload';
 import locale from './locale/index';
 // import 'material-design-icons/iconfont/material-icons.css';
-// import './styles/common/iconfont/material-icons.css';
+import './styles/common/iconfont/material-icons.css';
 
 const components = {
     euvUpload

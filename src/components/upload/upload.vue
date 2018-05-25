@@ -78,7 +78,7 @@ export default {
     },
     maxSize: { // 圖片最大大小 kb
       type: Number,
-      default: 2048 //2mb
+      default: 300 // 300kb
     }
   },
   data(){
@@ -121,7 +121,7 @@ export default {
       var reader     = new FileReader();
       var regexImage = /^image\//;
 
-      if(regexImage.test(file.type) && file) { // 圖片驗證
+      if(regexImage.test(file.type) && file && !file.match(/^([0-9a-zA-Z_\-~ :\\])+(.png|.PNG)$/)) { // 圖片驗證
         if( file.size <= this.maxSize * 1024) {
           reader.readAsDataURL(file) // base64
           reader.onloadend = () => {
@@ -154,15 +154,15 @@ export default {
           });
         }
       });
-      this.$emit('on-success', this.sendFileList) // 送出File列表
+      this.$emit('=', this.sendFileList) // 送出File列表
       this.initData();
     },
 
     checkImageSize(file){
-                if (file.size > this.maxSize * 1024) {
-                  this.onExceededSize(file, this.fileList);
-                  return false;
-                }
+      if (file.size > this.maxSize * 300) {
+        this.onExceededSize(file, this.fileList);
+        return false;
+      }
     },
     initData(){ // 參數初始化
       this.fileList=[]; 
