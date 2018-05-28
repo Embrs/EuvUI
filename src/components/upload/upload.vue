@@ -40,11 +40,11 @@
           <div class="pos-box">
             <div class="set-pos"> 
               <!-- X軸 -->
-              {{t('i.upload.axisX')}}<input type="number" :value="setX" @input="setXVal" >
+              {{t('i.upload.axisX')}}：<input type="number" :value="setX" @input="setXVal" >
             </div>
             <div class="set-pos">
               <!-- Y軸 -->
-              {{t('i.upload.axisY')}}<input type="number" :value="setY" @input="setYVal">
+              {{t('i.upload.axisY')}}：<input type="number" :value="setY" @input="setYVal">
             </div>
           </div>
           <!-- 確認上傳 -->
@@ -80,7 +80,7 @@ export default {
     },
     usePosition:  { // 使用設定座標 
       type: Boolean,
-      default: false
+      default: true
     },
     maxSize: { // 圖片最大大小 kb
       type: Number,
@@ -255,7 +255,7 @@ export default {
         justify-content: center;
         img{
           padding-right: 20px;
-          width:80px;
+          width:100px;
           height:80px;
         }
         .upload-icon{
