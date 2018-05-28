@@ -18,7 +18,11 @@
                   <!-- 請拖曳一張圖片進行上傳 -->
                   <!-- <i class="material-icons upload-icon">backup</i> -->
                   <!-- <Icon class="" type="arrow-right-b"></Icon> -->
-                  <p>{{t('i.upload.selectImage')}}</p>
+                  <div>
+                    <p>{{t('i.upload.selectImage')}}</p>
+                    <p>{{t('i.upload.ImageRule')}}{{maxSize}}{{t('i.upload.ImageRule2')}}</p>
+                  </div>
+                 
                 </div>
                 <input class="select-upload-image" ref="inputsx"  @change="getSelectImage($event)" type="file" name="" value="">
             </div>
@@ -120,8 +124,8 @@ export default {
       var file       = this.$refs.inputsx.files[0]
       var reader     = new FileReader();
       var regexImage = /^image\//;
-
-      if(regexImage.test(file.type) && file && !file.match(/^([0-9a-zA-Z_\-~ :\\])+(.png|.PNG)$/)) { // 圖片驗證
+      console.log(file)
+      if(regexImage.test(file.type) && file && file.name.match(/^([0-9a-zA-Z_\-~ :\\])+(.png|.PNG)$/)) { // 圖片驗證
         if( file.size <= this.maxSize * 1024) {
           reader.readAsDataURL(file) // base64
           reader.onloadend = () => {
@@ -242,6 +246,7 @@ export default {
         height: 100%;
         display: flex;
         align-items: center;
+        text-align: center;
         justify-content: center;
        
         .upload-icon{

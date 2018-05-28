@@ -101,6 +101,8 @@ const lang = {
             axisX: 'X軸',
             axisY: 'Y軸',
             selectImage: '請拖曳一張圖片進行上傳',
+            ImageRule: '(圖片必須小於',
+            ImageRule2: 'Kb，且為".png"格式)',
             okToUpload: '確認上傳',
         }
     }

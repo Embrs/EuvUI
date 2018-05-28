@@ -101,6 +101,8 @@ const lang = {
             axisX: 'X axis',
             axisY: 'Y axis',
             selectImage: 'Please drag and drop a image for uploading',
+            ImageRule: '(Image must be less than',
+            ImageRule2: 'kb in ".png" format)',
             okToUpload: 'Upload',
         }
     }
