@@ -126,7 +126,6 @@ export default {
       var file       = this.$refs.inputsx.files[0]
       var reader     = new FileReader();
       var regexImage = /^image\//;
-      console.log(file)
       if(regexImage.test(file.type) && file && file.name.match(/^([0-9a-zA-Z_\-~ :\\])+(.png|.PNG)$/)) { // 圖片驗證
         if( file.size <= this.maxSize * 1024) {
           reader.readAsDataURL(file) // base64
@@ -137,10 +136,10 @@ export default {
             })
           }
         } else {
-           this.$emit('on-fail', 'Image size is too large');
+           this.$emit('on-fail', '002, Image size is too large');
         }
       } else {
-        this.$emit('on-fail', 'Non-image format'); // image 格式錯誤
+        this.$emit('on-fail', '001, Non-image format'); // image 格式錯誤
       }
       this.$refs.inputsx.value = '';
     },  
@@ -160,7 +159,7 @@ export default {
           });
         }
       });
-      this.$emit('=', this.sendFileList) // 送出File列表
+      this.$emit('on-success', this.sendFileList) // 送出File列表
       this.initData();
     },
 
