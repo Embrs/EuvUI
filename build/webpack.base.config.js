@@ -126,8 +126,15 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+                test: /\.(gif|jpg|png)\??.*$/,
                 loader: 'url-loader?limit=8192'
+            },
+            {
+                test: /\.(woff2|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader',
+                options: {
+                    name: path.posix.join('dist', 'fonts/[name].[ext]')
+                  }
             },
             {
                 test: /\.(html|tpl)$/,
