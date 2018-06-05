@@ -199,7 +199,7 @@ export default {
     display: flex;
     justify-content: center;
     
-
+     border-radius: 10px;  
     position:relative;
     left: 0;
     background:linear-gradient(-45deg,#eee 0%,#eee 20%,#f7f7f7 20%, #f7f7f7 45%,#eee 45%,#eee 70%,#f7f7f7 70%, #f7f7f7 95%,#eee 95%,#eee 100%);
