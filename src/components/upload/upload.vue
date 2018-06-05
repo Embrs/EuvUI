@@ -16,7 +16,7 @@
                   <!-- 請拖曳一張圖片進行上傳 -->
                   <i class="material-icons upload-icon">backup</i>
                   <div>
-                    <p>{{t('i.upload.selectImage')}}</p>
+                    <p>{{eTitle}}，{{t('i.upload.selectImage')}}</p>
                     <p>{{t('i.upload.ImageRule')}}{{maxSize}}{{t('i.upload.ImageRule2')}}</p>
                   </div>
                  
@@ -61,6 +61,10 @@ export default {
   },
   mixins: [ Locale ], // for i18n
   props:{
+    eTitle: {
+      type: String,
+      default: 'none'
+    },
     multiple:{ // 上傳多張圖
       type: Boolean,
       default: false
