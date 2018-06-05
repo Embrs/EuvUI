@@ -199,15 +199,15 @@ export default {
     display: flex;
     justify-content: center;
     
-     border-radius: 10px;  
+    border-radius: 10px;  
     position:relative;
     left: 0;
     background:linear-gradient(-45deg,#eee 0%,#eee 20%,#f7f7f7 20%, #f7f7f7 45%,#eee 45%,#eee 70%,#f7f7f7 70%, #f7f7f7 95%,#eee 95%,#eee 100%);
-    background-size:90px 90px;
+    background-size:70px 70px;
     background-position:0 0;
     animation:neonaction 1s infinite linear;
     @keyframes neonaction{
-        0% { background-position:-90px 0; }
+        0% { background-position:-70px 0; }
         100% { background-position:0 0; }
     }
 
