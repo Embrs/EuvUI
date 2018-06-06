@@ -25,7 +25,7 @@
             </div>
             <!-- 上傳或下一步 -->
             <div v-show="fileList.length > 0" class='next-step'> 
-                <button v-if="(usePosition === true)" class="do-upload" @click="stepPage = 2" type="button">下一步</button>
+                <button v-if="(usePosition === true)" class="do-upload" @click="stepPage = 2" type="button">{{t('euv.upload.next')}}</button>
                 <button v-else class="do-upload" @click="toUploadImage($event)" type="button">{{t('euv.upload.okToUpload')}}</button>
             </div>
         </div>
@@ -202,7 +202,7 @@ export default {
     border-radius: 10px;  
     position:relative;
     left: 0;
-    background:linear-gradient(-45deg,#eee 0%,#eee 20%,#f7f7f7 20%, #f7f7f7 45%,#eee 45%,#eee 70%,#f7f7f7 70%, #f7f7f7 95%,#eee 95%,#eee 100%);
+    background:linear-gradient(-45deg,#eee 0%,#eee 20%,#f8f8f8 20%, #f8f8f8 45%,#eee 45%,#eee 70%,#f8f8f8 70%, #f8f8f8 95%,#eee 95%,#eee 100%);
     background-size:70px 70px;
     background-position:0 0;
     animation:neonaction 1s infinite linear;

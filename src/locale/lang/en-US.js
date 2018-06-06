@@ -104,6 +104,7 @@ const lang = {
             ImageRule: '( Image must be less than',
             ImageRule2: 'kb in ".png" format )',
             okToUpload: 'Upload',
+            next: 'Next',
         }
     }
 };

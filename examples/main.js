@@ -11,7 +11,7 @@ import EuvUI from '../src/index';
 import locale from '../src/locale/lang/en-US';
 
 Vue.use(VueRouter);
-// Vue.use(EuvUI, { locale });
+Vue.use(EuvUI, { locale });
 Vue.use(EuvUI);
 // 开启debug模式
 Vue.config.debug = true;

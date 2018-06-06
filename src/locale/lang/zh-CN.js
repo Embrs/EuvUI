@@ -104,6 +104,7 @@ const lang = {
             ImageRule: '( 图片必须小于',
             ImageRule2: 'Kb，且为".png"格式 )',
             okToUpload: '确认上传',
+            next: '下一步',
         }
     }
 };

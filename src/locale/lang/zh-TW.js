@@ -104,6 +104,7 @@ const lang = {
             ImageRule: '(圖片必須小於',
             ImageRule2: 'Kb，且為".png"格式)',
             okToUpload: '確認上傳',
+            next: '下一步',
         }
     }
 };

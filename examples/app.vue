@@ -5,7 +5,7 @@
 <template>
     <div class="container">
         <span>upload test</span>
-        <euvUpload @on-fail="failmsg" @on-success="successmsg"></euvUpload>
+        <euvUpload @on-fail="failmsg" @on-success="successmsg " :usePosition='true'></euvUpload>
         <!-- <router-view></router-view> -->
     </div>
 </template>
