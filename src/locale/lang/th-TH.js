@@ -1,7 +1,7 @@
 import setLang from '../lang';
 
 const lang = {
-    i: {
+    euv: {
         locale: 'th-TH',
         select: {
             placeholder: 'ตัวเลือก',

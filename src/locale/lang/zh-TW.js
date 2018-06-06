@@ -1,7 +1,7 @@
 import setLang from '../lang';
 
 const lang = {
-    i: {
+    euv: {
         locale: 'zh-TW',
         select: {
             placeholder: '請選擇',

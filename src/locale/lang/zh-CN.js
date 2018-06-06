@@ -1,7 +1,7 @@
 import setLang from '../lang';
 
 const lang = {
-    i: {
+    euv: {
         locale: 'zh-CN',
         select: {
             placeholder: '请选择',
@@ -101,8 +101,8 @@ const lang = {
             axisX: 'X轴',
             axisY: 'Y轴',
             selectImage: '请拖曳一张图片进行上传',
-            ImageRule: '(图片必须小于',
-            ImageRule2: 'Kb，且为".png"格式)',
+            ImageRule: '( 图片必须小于',
+            ImageRule2: 'Kb，且为".png"格式 )',
             okToUpload: '确认上传',
         }
     }

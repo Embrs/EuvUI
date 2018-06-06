@@ -16,8 +16,8 @@
                   <!-- 請拖曳一張圖片進行上傳 -->
                   <i class="material-icons upload-icon">backup</i>
                   <div>
-                    <p>{{eTitle}}，{{t('i.upload.selectImage')}}</p>
-                    <p>{{t('i.upload.ImageRule')}}{{maxSize}}{{t('i.upload.ImageRule2')}}</p>
+                    <p>{{eTitle}}，{{t('euv.upload.selectImage')}}</p>
+                    <p>{{`${t('euv.upload.ImageRule')} ${maxSize} ${t('euv.upload.ImageRule2')}`}}</p>
                   </div>
                  
                 </div>
@@ -26,7 +26,7 @@
             <!-- 上傳或下一步 -->
             <div v-show="fileList.length > 0" class='next-step'> 
                 <button v-if="(usePosition === true)" class="do-upload" @click="stepPage = 2" type="button">下一步</button>
-                <button v-else class="do-upload" @click="toUploadImage($event)" type="button">{{t('i.upload.okToUpload')}}</button>
+                <button v-else class="do-upload" @click="toUploadImage($event)" type="button">{{t('euv.upload.okToUpload')}}</button>
             </div>
         </div>
         <!-- ========================================================================= -->
@@ -35,15 +35,15 @@
           <div class="pos-box">
             <div class="set-pos"> 
               <!-- X軸 -->
-              {{t('i.upload.axisX')}}：<input type="number" :value="setX" @input="setXVal" >
+              {{t('euv.upload.axisX')}}：<input type="number" :value="setX" @input="setXVal" >
             </div>
             <div class="set-pos">
               <!-- Y軸 -->
-              {{t('i.upload.axisY')}}：<input type="number" :value="setY" @input="setYVal">
+              {{t('euv.upload.axisY')}}：<input type="number" :value="setY" @input="setYVal">
             </div>
           </div>
           <!-- 確認上傳 -->
-          <button class="do-upload" @click="toUploadImage($event)" type="button">{{t('i.upload.okToUpload')}}</button>
+          <button class="do-upload" @click="toUploadImage($event)" type="button">{{t('euv.upload.okToUpload')}}</button>
         </div>
     </div>
 </template>
