@@ -105,6 +105,7 @@ const lang = {
             ImageRule2: 'kb in ".png" format )',
             okToUpload: 'Upload',
             next: 'Next',
+            checkRemovalBG: 'Assist',
         }
     }
 };

@@ -1,16 +1,21 @@
 <template lang="html">
     <div class="env-upload" :style="styles">
         <!-- 第一步 選擇圖 -->
-        <div v-show="stepPage === 1" class="box-group">
+        <div v-show="stepPage === 1" class="box-group" :class="{'box-animation':isChecked}">
             <!-- 顯示選擇圖示 -->
             <div class="box" v-for="file,index in fileList">
                 <!-- 刪圖按鈕 -->
                 <div class="x-botton" @click="deleteImage($event,index)">
                   <i class="material-icons x-button-icon">delete_forever</i>  
                 </div>
+                <div class="remove-bg">
+                  <input type="checkbox" v-model="isChecked">
+                  <label for="checkbox">{{ t('euv.upload.checkRemovalBG') }}</label>
+                </div>
                 <img class="show-select-img" :src="file.src">
             </div>
             <!-- 選擇上傳圖片 -->
+            
             <div v-show="showUploadBox" class="box box-border">
                 <div class="upload-msg">
                   <!-- 請拖曳一張圖片進行上傳 -->
@@ -23,6 +28,7 @@
                 </div>
                 <input class="select-upload-image" ref="inputsx"  @change="getSelectImage($event)" type="file" name="" value="">
             </div>
+          
             <!-- 上傳或下一步 -->
             <div v-show="fileList.length > 0" class='next-step'> 
                 <button v-if="(usePosition === true)" class="do-upload" @click="stepPage = 2" type="button">{{t('euv.upload.next')}}</button>
@@ -93,7 +99,8 @@ export default {
       view:false,
       stepPage: 1,  
       setX:0, 
-      setY:0, 
+      setY:0,
+      isChecked: false,
     }
   },
 
@@ -111,7 +118,7 @@ export default {
       }
     }
   },
-  methods:{    
+  methods:{
     setXVal(event){
       this.setX = event.target.value;
     },
@@ -190,15 +197,8 @@ export default {
   align-items: center; 
   color: #666;
   font-size: 20px;
-//   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.1);
-  .box-group{ // step page 1
-    position: relative;
-    align-content: center;
-    width: 90%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    
+
+  .box-animation{
     border-radius: 10px;  
     position:relative;
     left: 0;
@@ -210,7 +210,15 @@ export default {
         0% { background-position:-70px 0; }
         100% { background-position:0 0; }
     }
+  }
 
+  .box-group{ // step page 1
+    position: relative;
+    align-content: center;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
     .box{
       width: 100%;
       height: 100%;
@@ -221,6 +229,18 @@ export default {
         margin: auto;
         max-width: 85%;
         max-height: 85%;
+      }
+      .remove-bg{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        display: flex;
+        align-items: center;
+        z-index: 100;
+        cursor: pointer;
+        zoom: 1.5;
+        font-size: 10px;
+        color: #999;
       }
       .x-botton{
         position: absolute;

@@ -105,6 +105,7 @@ const lang = {
             ImageRule2: 'Kb，且为".png"格式 )',
             okToUpload: '确认上传',
             next: '下一步',
+            checkRemovalBG: '辅助功能',
         }
     }
 };
