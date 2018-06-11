@@ -11,7 +11,7 @@
          <br>
         <span>select test</span>
         <br>
-        <euvSwitch @SelectIndex='SwitchFilter' :DefaultIndex='2' :Data="['中文','English','132123','555']"></euvSwitch>
+        <euvSwitch @SelectIndex='SwitchFilter' :DefaultIndex='2' :Data="['中文','English']"></euvSwitch>
     </div>
 </template>
 <script>

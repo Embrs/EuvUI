@@ -38,18 +38,14 @@ export default {
   },
   methods: {
     showSelect(index) {
-        console.log('aaa', this.currentIndex)
        if (this.currentIndex === -1) this.currentIndex = this.DefaultIndex;
-        
        return (this.currentIndex === index)? true : false;
     },
     selectIndex(index) {
-   
       if (this.currentIndex !== index) {
         this.currentIndex = index;
         this.currentWidth =  this.$refs.item[this.currentIndex].offsetWidth;
         this.currentLeft  =  this.$refs.item[this.currentIndex].offsetLeft;
-        console.log(this.currentIndex, this.currentWidth, this.currentLeft)
         this.$emit('SelectIndex', this.currentIndex);
       }
     },
@@ -71,9 +67,9 @@ export default {
     position: relative;
     border-radius: 100px; // 60% 40% 40% 60%;
     display: inline-flex;
-    border:#666 3px solid; 
+    border:#666 2px solid; 
     background: #888;
-    height: 25px;
+    height: 30px;
     .item{
         min-width: 30px;
         height: 100%;
