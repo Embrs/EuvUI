@@ -54,7 +54,6 @@ export default {
     if (this.currentIndex !== -1) {
       this.currentWidth=  this.$refs.item[this.currentIndex].offsetWidth;
       this.currentLeft  =  this.$refs.item[this.currentIndex].offsetLeft;
-      console.log(this.currentIndex, this.currentWidth, this.currentLeft)
     }
    
   }
