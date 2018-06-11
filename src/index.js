@@ -1,10 +1,12 @@
 
 import euvUpload from './components/upload';
+import euvSwitch from './components/switch';
 import locale from './locale/index';
 import './styles/common/iconfont/material-icons.css';
 
 const components = {
-    euvUpload
+    euvUpload,
+    euvSwitch
 };
 
 const euvui = {

@@ -4,9 +4,14 @@
 
 <template>
     <div class="container">
-        <span>upload test</span>
-        <euvUpload @on-fail="failmsg" @on-success="successmsg " :usePosition='true'></euvUpload>
+        <!-- <span>upload test</span>
+        <br>
+        <euvUpload @on-fail="failmsg" @on-success="successmsg " :usePosition='true'></euvUpload> -->
         <!-- <router-view></router-view> -->
+         <br>
+        <span>select test</span>
+        <br>
+        <euvSwitch @SelectIndex='SwitchFilter' :DefaultIndex='2' :Data="['中文','English','132123','555']"></euvSwitch>
     </div>
 </template>
 <script>
@@ -16,6 +21,9 @@ export default {
       console.log(msg)
     },
     successmsg(val){
+      console.log(val)
+    },
+    SwitchFilter(val){
       console.log(val)
     }
   }    
