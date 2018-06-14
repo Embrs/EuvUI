@@ -4,14 +4,14 @@
 
 <template>
     <div class="container">
-        <!-- <span>upload test</span>
+        <span>upload test</span>
         <br>
-        <euvUpload @on-fail="failmsg" @on-success="successmsg " :usePosition='true'></euvUpload> -->
-        <!-- <router-view></router-view> -->
+        <euvUpload @on-fail="failmsg" @on-success="successmsg " :usePosition='true'></euvUpload>
+        <router-view></router-view>
          <br>
         <span>select test</span>
         <br>
-        <euvSwitch @SelectIndex='SwitchFilter' :DefaultIndex='2' :Data="['中文','English']"></euvSwitch>
+        <euvSwitch @SelectIndex='SwitchFilter' :DefaultIndex='1' ></euvSwitch>
     </div>
 </template>
 <script>

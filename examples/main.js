@@ -8,7 +8,7 @@ import App from './app.vue';
 import EuvUI from '../src/index';
 // import EuvUI from '../dist/euvui.min.js';
 // import locale from '../src/locale/lang/en-US';
-import locale from '../src/locale/lang/en-US';
+// import locale from '../src/locale/lang/en-US';
 
 Vue.use(VueRouter);
 // Vue.use(EuvUI, { locale });

@@ -132,7 +132,7 @@ export default {
       var file       = this.$refs.inputsx.files[0]
       var reader     = new FileReader();
       var regexImage = /^image\//;
-      if(regexImage.test(file.type) && file && file.name.match(/^([0-9a-zA-Z_\-~ \[\]:()\\])+(.png|.PNG)$/)) { // 圖片驗證
+      if(regexImage.test(file.type) && file && file.name.match(/^([\s\S])+(.png|.PNG)$/)) { // 圖片驗證 // (/^([0-9a-zA-Z_\-~ \[\]:()\\])+(.png|.PNG)$/))
         if( file.size <= this.maxSize * 1024) {
           reader.readAsDataURL(file) // base64
           reader.onloadend = () => {

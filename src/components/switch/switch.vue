@@ -16,7 +16,7 @@ export default {
       type: Number
     },
     Data: {
-      default: () => [1, 0],
+      default: () => ['On', 'Off'],
       type: Array,
     },
   },
