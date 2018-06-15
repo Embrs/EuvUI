@@ -265,7 +265,7 @@ export default {
         } 
         &:hover{
           transition:background-color  0.4s linear;
-          background: rgb(252, 188, 227);
+          background: rgb(255, 187, 187);
         }
       }
       .select-upload-image{
