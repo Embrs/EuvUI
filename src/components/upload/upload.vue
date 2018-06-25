@@ -136,9 +136,15 @@ export default {
         if( file.size <= this.maxSize * 1024) {
           reader.readAsDataURL(file) // base64
           reader.onloadend = () => {
-            this.fileList.push({// 加到暫存
-              'file':file,
-              'src':reader.result
+            this.loadImage(reader.result).then(img => {
+              this.fileList.push({// 加到暫存
+                'file': file,
+                'src': reader.result,
+                'width': img.width,
+                'height': img.height,
+              })
+            }).catch(err => {
+              this.$emit('on-fail', '001, Non-image format'); // image load 失敗，判定格式錯誤
             })
           }
         } else {
@@ -149,6 +155,15 @@ export default {
       }
       this.$refs.inputsx.value = '';
     },  
+    
+    loadImage(url) {
+        return new Promise((resolve, reject) => {
+            let img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = url;
+        })
+    },
 
     toUploadImage(){
       this.sendFileList = [];  // 清除傳出列表
