@@ -106,6 +106,7 @@ const lang = {
             okToUpload: '確認上傳',
             next: '下一步',
             checkRemovalBG: '輔助功能',
+            thisImageSize: '此圖尺寸為',
         }
     }
 };

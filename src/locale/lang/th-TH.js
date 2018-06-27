@@ -106,7 +106,7 @@ const lang = {
             okToUpload: 'Upload',
             next: 'Next',
             checkRemovalBG: 'Assist',
-
+            thisImageSize: 'This image size is',
         }
     }
 };

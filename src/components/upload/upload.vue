@@ -8,6 +8,9 @@
                 <div class="x-botton" @click="deleteImage($event,index)">
                   <i class="material-icons x-button-icon">delete_forever</i>  
                 </div>
+                <div class="wh-message" >
+                  <h6> {{t('euv.upload.thisImageSize')}} W:{{fileList[0].width}} x H:{{fileList[0].height}}</h6>
+                </div>
                 <div class="remove-bg">
                   <input type="checkbox" v-model="isChecked">
                   <label for="checkbox">{{ t('euv.upload.checkRemovalBG') }}</label>
@@ -24,7 +27,6 @@
                     <p>{{eTitle}}，{{t('euv.upload.selectImage')}}</p>
                     <p>{{`${t('euv.upload.ImageRule')} ${maxSize} ${t('euv.upload.ImageRule2')}`}}</p>
                   </div>
-                 
                 </div>
                 <input class="select-upload-image" ref="inputsx"  @change="getSelectImage($event)" type="file" name="" value="">
             </div>
@@ -282,6 +284,12 @@ export default {
           transition:background-color  0.4s linear;
           background: rgb(255, 187, 187);
         }
+      }
+      .wh-message{
+        color: #999;
+        position: absolute;
+        bottom: 15px;
+        align-items: center;
       }
       .select-upload-image{
         opacity: 0; //隱藏按鈕
