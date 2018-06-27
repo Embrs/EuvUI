@@ -9,7 +9,7 @@
                   <i class="material-icons x-button-icon">delete_forever</i>  
                 </div>
                 <div class="wh-message" >
-                  <h6> {{t('euv.upload.thisImageSize')}} W:{{fileList[0].width}} x H:{{fileList[0].height}}</h6>
+                  <p style="font-size:8px"> {{t('euv.upload.thisImageSize')}} W:{{fileList[0].width}} x H:{{fileList[0].height}}</p>
                 </div>
                 <div class="remove-bg">
                   <input type="checkbox" v-model="isChecked">
@@ -288,7 +288,7 @@ export default {
       .wh-message{
         color: #999;
         position: absolute;
-        bottom: 15px;
+        bottom: 35px;
         align-items: center;
       }
       .select-upload-image{
