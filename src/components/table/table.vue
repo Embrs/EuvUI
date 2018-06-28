@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="env-table" :style="styles">
+    <div class="euv-table" :style="styles">
   
     </div>
 </template>
@@ -136,7 +136,7 @@ export default {
 </script>
 
 <style lang="scss">
-.env-upload{
+.euv-upload{
   border-radius: 10px;  
   min-width: 100px;
   min-height: 100px;

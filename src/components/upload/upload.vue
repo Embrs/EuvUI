@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="env-upload" :style="styles">
+    <div class="euv-upload" :style="styles">
         <!-- 第一步 選擇圖 -->
         <div v-show="stepPage === 1" class="box-group" :class="{'box-animation':isChecked}">
             <!-- 顯示選擇圖示 -->
@@ -204,7 +204,7 @@ export default {
 </script>
 
 <style lang="scss">
-.env-upload{
+.euv-upload{
   border-radius: 10px;  
   min-width: 100px;
   min-height: 100px;
